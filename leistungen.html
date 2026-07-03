@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leistungen im Detail – AS-Hausverwaltung Dresden GmbH</title>
+<meta name="description" content="Alle Leistungen der AS-Hausverwaltung Dresden GmbH im Detail: WEG-Verwaltung, Sondereigentums- und Mietverwaltung, Hausmeisterdienst, Baumängel, Kosteneinsparungen, Verwaltervertrag – inklusive Musterdokumente als PDF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --blue-900:#0d2c54;--blue-800:#123a6d;--blue-700:#17498a;--blue-600:#1c58a6;--blue-500:#2469c1;
+    --blue-100:#e3edf9;--blue-50:#f1f6fc;--red:#d63a2f;--ink:#152435;--slate:#5a6b7d;--line:#dfe7ef;
+    --radius:16px;
+    --shadow-sm:0 1px 3px rgba(13,44,84,.08);--shadow-md:0 8px 28px rgba(13,44,84,.12);
+    --maxw:1080px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:'Plus Jakarta Sans',-apple-system,sans-serif;color:var(--ink);background:#fff;line-height:1.7;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+  /* Header */
+  .topbar{background:var(--blue-900);color:rgba(255,255,255,.85);font-size:13.5px;font-weight:500}
+  .topbar .twrap{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;align-items:center;height:38px;gap:18px}
+  .topbar a{display:inline-flex;align-items:center;gap:7px}
+  .topbar a:hover{color:#fff}
+  .topbar svg{width:14px;height:14px;stroke:#9ec1ee}
+  .topbar .right{display:flex;gap:22px}
+  header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.93);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .nav{max-width:1180px;margin:0 auto;padding:0 24px;display:flex;align-items:center;gap:26px;height:76px}
+  .brand{display:flex;align-items:center;gap:12px;margin-right:auto}
+  .brand-name{font-weight:800;font-size:17px;line-height:1.2;color:var(--blue-900)}
+  .brand-name small{display:block;font-weight:600;font-size:10.5px;letter-spacing:.15em;text-transform:uppercase;color:var(--slate)}
+  nav.menu{display:flex;gap:24px}
+  nav.menu a{color:var(--ink);font-weight:600;font-size:15px}
+  nav.menu a:hover,nav.menu a.active{color:var(--blue-700)}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:15px;padding:12px 22px;border-radius:11px;border:none;cursor:pointer;font-family:inherit;transition:transform .15s,box-shadow .2s}
+  .btn:hover{transform:translateY(-1px)}
+  .btn-blue{background:linear-gradient(135deg,var(--blue-500),var(--blue-700));color:#fff;box-shadow:0 5px 16px rgba(28,88,166,.32)}
+  /* Page head */
+  .pagehead{background:linear-gradient(180deg,var(--blue-50),#fff);padding:64px 0 40px;border-bottom:1px solid var(--line)}
+  .kicker{display:inline-flex;align-items:center;gap:10px;font-size:12.5px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--blue-600);margin-bottom:12px}
+  .kicker::before{content:"";width:26px;height:3px;border-radius:2px;background:var(--red)}
+  h1{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.02em;color:var(--blue-900);line-height:1.12}
+  .pagehead p{margin-top:16px;font-size:16.5px;color:var(--slate);max-width:70ch}
+  .facts{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .facts span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 16px;font-size:13px;font-weight:700;color:var(--blue-800);box-shadow:var(--shadow-sm)}
+  .jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+  .jump a{background:var(--blue-100);color:var(--blue-800);border-radius:999px;padding:8px 18px;font-size:13.5px;font-weight:700;transition:background .2s}
+  .jump a:hover{background:var(--blue-600);color:#fff}
+  /* Sections */
+  section.svc{padding:64px 0;border-bottom:1px solid var(--line);scroll-margin-top:90px}
+  section.svc:last-of-type{border-bottom:none}
+  .svc-grid{display:grid;grid-template-columns:56px 1fr;gap:24px;align-items:start}
+  .svc .icon{width:56px;height:56px;border-radius:15px;background:var(--blue-50);border:1px solid var(--blue-100);display:grid;place-items:center;position:sticky;top:100px}
+  .svc .icon svg{width:27px;height:27px;stroke:var(--blue-600)}
+  .svc h2{font-size:26px;font-weight:800;color:var(--blue-900);letter-spacing:-.01em;margin-bottom:14px}
+  .svc p{font-size:15.5px;color:var(--ink);margin-bottom:13px;max-width:75ch}
+  .svc p.muted{color:var(--slate);font-size:14.5px}
+  .svc ul.pts{margin:8px 0 14px 2px;display:grid;gap:9px}
+  .svc ul.pts li{list-style:none;display:flex;gap:11px;font-size:15px}
+  .svc ul.pts li::before{content:"";flex-shrink:0;width:7px;height:7px;border-radius:99px;background:var(--red);margin-top:9px}
+  .callout{background:var(--blue-50);border-left:4px solid var(--blue-500);border-radius:10px;padding:16px 20px;margin:16px 0;font-size:15px;font-weight:600;color:var(--blue-900);max-width:70ch}
+  /* Downloads */
+  .dl-list{display:grid;gap:11px;margin:20px 0 6px;max-width:640px}
+  .dl{display:flex;align-items:center;gap:14px;background:#fff;border:1.5px solid var(--line);border-radius:13px;padding:13px 17px;transition:border-color .2s,box-shadow .2s,transform .15s}
+  .dl:hover{border-color:var(--blue-500);box-shadow:var(--shadow-sm);transform:translateY(-1px)}
+  .dl .fic{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:#fdeae8;display:grid;place-items:center}
+  .dl .fic svg{width:19px;height:19px;stroke:var(--red)}
+  .dl strong{display:block;font-size:14.5px;color:var(--blue-900);line-height:1.35}
+  .dl span{font-size:12.5px;color:var(--slate);font-weight:600}
+  .dl .arr{margin-left:auto;color:var(--blue-600);flex-shrink:0}
+  /* Team */
+  .team{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:20px;max-width:760px}
+  .member{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:var(--radius);padding:24px 26px}
+  .member .avatar{width:52px;height:52px;border-radius:99px;background:var(--blue-800);color:#fff;display:grid;place-items:center;font-weight:800;font-size:17px;margin-bottom:14px}
+  .member strong{display:block;font-size:16.5px;color:var(--blue-900)}
+  .member em{display:block;font-style:normal;font-size:13px;font-weight:700;color:var(--blue-600);margin:2px 0 8px}
+  .member p{font-size:14px;color:var(--slate);margin:0}
+  .member a{color:var(--blue-700);font-weight:700}
+  /* Philosophie */
+  .philo{background:linear-gradient(120deg,var(--blue-900),var(--blue-700));border-radius:22px;color:#fff;padding:48px 52px;margin:64px 0}
+  .philo h2{font-size:24px;font-weight:800;margin-bottom:6px}
+  .philo .script{font-family:'Caveat',cursive;font-size:30px;color:#9ec1ee}
+  .philo ol{margin:22px 0 0;padding-left:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 34px;counter-reset:ph}
+  .philo li{list-style:none;counter-increment:ph;display:flex;gap:13px;font-size:14.5px;color:rgba(255,255,255,.92)}
+  .philo li::before{content:counter(ph);flex-shrink:0;width:26px;height:26px;border-radius:99px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);display:grid;place-items:center;font-size:12.5px;font-weight:800;margin-top:1px}
+  /* CTA + footer */
+  .cta{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:22px;padding:44px;text-align:center;margin:64px 0}
+  .cta h2{font-size:24px;font-weight:800;color:var(--blue-900);margin-bottom:8px}
+  .cta p{color:var(--slate);margin-bottom:22px}
+  footer{border-top:1px solid var(--line);padding:28px 0;text-align:center;font-size:13px;color:var(--slate)}
+  footer a{color:var(--blue-700);font-weight:600}
+  @media (max-width:720px){
+    nav.menu{display:none}
+    .header-login span{display:none}
+    .topbar .hide-m{display:none}
+  }
+  @media (max-width:860px){
+    .svc-grid{grid-template-columns:1fr}
+    .svc .icon{position:static}
+    .team,.philo ol{grid-template-columns:1fr}
+    .philo{padding:36px 28px}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <a class="brand" href="index.html">
+      <svg width="44" height="44" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="1" y="1" width="46" height="46" rx="11" fill="#0d2c54"/>
+        <path d="M10 21.5 24 10l14 11.5" stroke="#d63a2f" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+        <text x="24" y="36" text-anchor="middle" font-family="'Plus Jakarta Sans',sans-serif" font-weight="800" font-size="15.5" fill="#fff" letter-spacing=".5">AS</text>
+      </svg>
+      <span class="brand-name">AS-Hausverwaltung<small>Dresden GmbH</small></span>
+    </a>
+    <nav class="menu">
+      <a href="leistungen.html" class="active">Leistungen</a>
+      <a href="index.html#ueber-uns">Über uns</a>
+      <a href="index.html#referenzen">Referenzen</a>
+      <a href="service.html">Service</a>
+      <a href="index.html#aktuelles">Aktuelles</a>
+      <a href="index.html#kontakt">Kontakt</a>
+    </nav>
+    <button class="btn btn-blue header-login" onclick="location.href='index.html#portal'">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      <span>Eigentümer-Login</span>
+    </button>
+  </div>
+</header>
+
+<div class="pagehead">
+  <div class="wrap">
+    <span class="kicker">Unsere Leistungen im Detail</span>
+    <h1>Wir nehmen uns Zeit für Ihre HAUS-Aufgaben.</h1>
+    <p>Seit 1994 verwalten wir Wohn-, Gewerbe- und gemischte Immobilien in Dresden und Umgebung – von der WEG-Verwaltung über die Sondereigentums- und Miethausverwaltung bis zu Betriebskostenabrechnungen und Vermietung.</p>
+    <div class="facts">
+      <span>Seit 1994 in Dresden</span>
+      <span>Mitglied im BVI e.V.</span>
+      <span>Berufshaftpflicht</span>
+      <span>Vermögensschadenshaftpflicht</span>
+      <span>Vertrauensschadenshaftpflicht</span>
+    </div>
+    <div class="jump">
+      <a href="#weg-verwaltung">WEG-Verwaltung</a>
+      <a href="#sondereigentum">Sondereigentum &amp; Miete</a>
+      <a href="#hausmeisterdienst">Hausmeisterdienst</a>
+      <a href="#baumaengel">Baumängel</a>
+      <a href="#kosteneinsparungen">Kosteneinsparungen</a>
+      <a href="#verwaltervertrag">Verwaltervertrag</a>
+      <a href="#team">Büro &amp; Team</a>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- WEG-Verwaltung -->
+  <section class="svc" id="weg-verwaltung">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1M9 13h1m4 0h1M9 17h1m4 0h1"/></svg></div>
+      <div>
+        <h2>WEG-Verwaltung</h2>
+        <p>Welche Dienstleistungen für Ihre Wohnungseigentümergemeinschaft benötigen Sie? Wir bieten das komplette Spektrum:</p>
+        <ul class="pts">
+          <li>Die typische Verwaltung nach WEG (Wohnungseigentumsgesetz) – von der Eigentümerversammlung über die Beschlussumsetzung bis zur laufenden Bewirtschaftung.</li>
+          <li>Sie verwalten selbst und benötigen nur eine professionelle Hausgeldabrechnung mit kompletter Buchhaltung? Auch das übernehmen wir gern.</li>
+          <li>Zuverlässige und übersichtliche Buchhaltung mit allen Buchungen zu Ihrem Objekt.</li>
+        </ul>
+        <div class="callout">Sie sind Mitglied im Verwaltungsbeirat? Bestehen Sie bei der nächsten Kassenprüfung auf die Vorlage des Vermögensstatus – ein einfaches Hilfsmittel, mit dem sich die Geldbestände der WEG zuverlässig prüfen lassen.</div>
+        <div class="dl-list">
+          <a class="dl" href="downloads/hg_abrechnung.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Hausgeldabrechnung (Muster)</strong><span>PDF · Beispiel einer professionellen Abrechnung</span></span>
+            <span class="arr">↓</span>
+          </a>
+          <a class="dl" href="downloads/jahresbuchhaltung_details.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Jahresbuchhaltung (Muster)</strong><span>PDF · Alle Buchungen übersichtlich zusammengefasst</span></span>
+            <span class="arr">↓</span>
+          </a>
+          <a class="dl" href="downloads/v_status.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Vermögensstatus (Muster)</strong><span>PDF · Das Hilfsmittel für Ihre Kassenprüfung</span></span>
+            <span class="arr">↓</span>
+          </a>
+          <a class="dl" href="downloads/AS-Hausverwaltung-Leistungsverzeichnis.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Leistungsverzeichnis</strong><span>PDF · Übersicht aller Leistungen der AS-Hausverwaltung</span></span>
+            <span class="arr">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sondereigentum -->
+  <section class="svc" id="sondereigentum">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5M5 11v9h14v-9M9 20v-5h6v5"/></svg></div>
+      <div>
+        <h2>Sondereigentums- &amp; Mietshausverwaltung</h2>
+        <p>Selbstverständlich bieten wir auch Leistungen im Bereich des Sondereigentums bzw. für Miethäuser an. Das Spektrum reicht von:</p>
+        <ul class="pts">
+          <li>der Vermietung einer einzelnen Wohneinheit,</li>
+          <li>über die Erstellung der Betriebskostenabrechnung,</li>
+          <li>bis hin zur allumfassenden Verwaltung des Sondereigentums bzw. des Miethauses mit Mietinkasso – immer in Abhängigkeit von Ihren Wünschen als Eigentümer.</li>
+        </ul>
+        <p class="muted">In der Sondereigentumsverwaltung erhält jeder Eigentümer unmittelbar nach Abschluss des Wirtschaftsjahres die komplette Buchhaltung übersandt – fertig für den Steuerberater.</p>
+        <div class="dl-list">
+          <a class="dl" href="downloads/bk_abrechnung.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Betriebskostenabrechnung (Muster)</strong><span>PDF · Beispielabrechnung für Mieter</span></span>
+            <span class="arr">↓</span>
+          </a>
+          <a class="dl" href="downloads/sev_kontoauszug.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Sondereigentumsabrechnung (Muster)</strong><span>PDF · Abrechnung für Eigentümer</span></span>
+            <span class="arr">↓</span>
+          </a>
+          <a class="dl" href="downloads/mieterkonto.pdf" target="_blank">
+            <span class="fic"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6"/></svg></span>
+            <span><strong>Mieterkontoauszug (Muster)</strong><span>PDF · Transparente Übersicht für Mieter</span></span>
+            <span class="arr">↓</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hausmeisterdienst -->
+  <section class="svc" id="hausmeisterdienst">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.09 6.09L3 18v3h3l5.61-5.61a4.5 4.5 0 0 0 6.09-6.09l-2.85 2.85-2.55-2.55L14.7 6.3z"/></svg></div>
+      <div>
+        <h2>Hausmeisterdienst</h2>
+        <p>Bei vielen Hausverwaltungen mit eigenem Hausmeisterdienst gibt es einen Interessenskonflikt: Auf der einen Seite sollen Dienstleistungen durch den Hausverwalter preiswert eingekauft werden – auf der anderen Seite möchte jedes Unternehmen, also auch der eigene Hausmeisterdienst, seinen Gewinn maximieren.</p>
+        <div class="callout">Deswegen haben wir uns festgelegt und keinen eigenen Hausmeisterdienst etabliert.</div>
+        <p>Wir arbeiten mit mehreren bewährten Hausmeisterdiensten zusammen. Abhängig von der Aufgabenstellung für das betreffende Objekt wird der am besten geeignete Dienst beauftragt – selbstverständlich unter Wahrung wirtschaftlicher Gesichtspunkte.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Baumängel -->
+  <section class="svc" id="baumaengel">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg></div>
+      <div>
+        <h2>Verfolgung von Baumängeln</h2>
+        <p>Besonders hilfreich bei technischen oder bautechnischen Problemen – insbesondere bei der Mängelverfolgung und der Durchsetzung von Gewährleistungsansprüchen – sind unsere Ingenieursausbildung sowie mehrjährige praktische Erfahrungen in der Bausanierung.</p>
+        <ul class="pts">
+          <li>Wir beraten Eigentümer und Mieter über bauphysikalische Zusammenhänge von Heizen, Lüften und Luftfeuchtigkeit.</li>
+          <li>Kommt es dennoch zu Problemen, suchen wir vor Ort nach den Ursachen und klären auf.</li>
+          <li>Bei besonders schwierigen oder umfangreichen Sachverhalten greifen wir auf das Fachwissen langjährig erfahrener Bausachverständiger zurück.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Kosteneinsparungen -->
+  <section class="svc" id="kosteneinsparungen">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 1.8 2.7 5 3.2 5 1.4 5 3.3-2.2 3-5 3-5-1.1-5-3"/></svg></div>
+      <div>
+        <h2>Kosteneinsparungen</h2>
+        <p>Als Hausverwalter sind wir in der Pflicht, das Eigentum unserer Auftraggeber als Treuhänder zu verwalten – insbesondere auch unter wirtschaftlichen Gesichtspunkten. Denn:</p>
+        <div class="callout">Das am leichtesten verdiente Geld ist das, was man nicht ausgeben muss!</div>
+        <p>Deswegen überprüfen wir die Bewirtschaftungskosten laufend nach Einsparungsmöglichkeiten:</p>
+        <ul class="pts">
+          <li>Prüfung der Kosten der Energieversorgung in Abhängigkeit von der Dimensionierung der Heizungsanlage</li>
+          <li>Überprüfung der Anzahl der Müllentsorgungsbehälter</li>
+          <li>Einsparpotenzial bei Bankgebühren – ja, sicher! Sprechen Sie mit uns.</li>
+          <li>Umfassende und trotzdem preiswerte Versicherung Ihrer Immobilie, auch gegen Elementarschäden und Vandalismus</li>
+          <li>Prüfung auf preiswertere TV-Kabelanbieter</li>
+          <li>Und nicht zuletzt: die wirtschaftliche Auswahl des <a href="#hausmeisterdienst" style="color:var(--blue-700);font-weight:700;text-decoration:underline">Hausmeisterdienstes</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Verwaltervertrag -->
+  <section class="svc" id="verwaltervertrag">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6M9 14l2 2 4-4"/></svg></div>
+      <div>
+        <h2>Verwaltervertrag</h2>
+        <p>Wir sehen uns als Dienstleister. Das bedeutet: Alle Verfahrensweisen, die nicht durch den Gesetzgeber festgeschrieben sind, können Ihren Wünschen entsprechend mit uns vereinbart werden.</p>
+        <p>Niemand bindet sich gerne auf längere Zeit – vor allem dann, wenn man den neuen Vertragspartner noch nicht kennt. Deshalb sind wir auch mit <strong>kurzen Vertragslaufzeiten</strong> einverstanden. Im Hinblick auf unsere bisherigen Erfolge sind wir sicher, dass Sie einen Verwaltervertrag mit uns gerne verlängern werden.</p>
+        <div class="callout">Zur Absicherung unserer Auftraggeber haben wir eine Vermögensschadens-, eine Betriebshaftpflicht- sowie eine Vertrauensschadenshaftpflichtversicherung abgeschlossen. Letztere sichert Ihr WEG-Geldvermögen auch gegen die Gefahren der Computerkriminalität aus dem Internet ab.</div>
+        <p>Schon heute können wir Ihnen eine kompetente und zuverlässige Verwaltung Ihrer Immobilien in Dresden zusichern!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Büro & Team -->
+  <section class="svc" id="team">
+    <div class="svc-grid">
+      <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/><circle cx="9" cy="7" r="4"/></svg></div>
+      <div>
+        <h2>Unser Büro &amp; unser Team</h2>
+        <p>Um ausreichend Zeit für den Kontakt zu Eigentümern und Mietern zu haben, ist unser Büro mit moderner EDV ausgestattet: Bankinformationen werden täglich elektronisch abgeholt und verbucht, so dass auf jede Unregelmäßigkeit kurzfristig reagiert werden kann. Die gesamte Kommunikation – Telefon, E-Mail und Briefpost – ist computerunterstützt.</p>
+        <div class="team">
+          <div class="member">
+            <span class="avatar">AS</span>
+            <strong>Andreas Scholz</strong>
+            <em>Geschäftsführer · Dipl.-Ing. (TH)</em>
+            <p>Firmengründer. Erfahrungen in der Altbausanierung seit 1993, in der Immobilienverwaltung seit 1994. Entwickelt und betreut zugleich die EDV des Unternehmens.<br><a href="tel:+493513110736">Tel. (0351) 311 07 36</a></p>
+          </div>
+          <div class="member">
+            <span class="avatar">AW</span>
+            <strong>Annett Wendler</strong>
+            <em>Buchhaltung &amp; Abrechnungen</em>
+            <p>Seit 2005 im Team. Betreut im Innendienst die tägliche Buchhaltung und erstellt die Jahresabrechnungen.<br><a href="tel:+493513110738">Tel. (0351) 311 07 38</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophie -->
+  <div class="philo">
+    <span class="script">Unsere Firmenphilosophie</span>
+    <h2>Es gibt nichts, was man nicht noch besser machen könnte!</h2>
+    <ol>
+      <li>Service und Ihre Zufriedenheit haben für uns Priorität Nr. 1.</li>
+      <li>Keine Massenverwaltung: Wir entsprechen sehr individuell den Wünschen der Eigentümer und Eigentümergemeinschaften – Sonderwünsche willkommen.</li>
+      <li>Wir scheuen uns nicht, auch unbequeme Problemstellungen wie die Mängelverfolgung zu bearbeiten.</li>
+      <li>Eine enge Zusammenarbeit mit den Eigentümern ist selbstverständlich.</li>
+      <li>Gute Verwaltung heißt für uns: gewissenhafte Arbeit am Schreibtisch und persönlicher Kontakt vor Ort.</li>
+      <li>Wir verwalten nur Objekte in der nahen Umgebung.</li>
+      <li>Viele Unstimmigkeiten lassen sich vermeiden, wenn man rechtzeitig das klärende Gespräch sucht – wir tun das.</li>
+      <li>Abrechnungen jeglicher Art erledigen wir kurzfristig nach Ende der Abrechnungsperiode.</li>
+    </ol>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta">
+    <h2>Überzeugt? Lernen wir uns kennen.</h2>
+    <p>Fordern Sie ein unverbindliches Angebot für Ihre WEG oder Ihr Mietobjekt an.</p>
+    <a class="btn btn-blue" href="index.html#kontakt">Jetzt Kontakt aufnehmen
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 AS-Hausverwaltung Dresden GmbH · <a href="index.html">Startseite</a> · <a href="service.html">Service</a> · <a href="impressum.html">Impressum</a>
+</footer>
+</body>
+</html>
