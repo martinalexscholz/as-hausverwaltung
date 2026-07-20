@@ -66,24 +66,31 @@
 
   /* ---------- Hero ---------- */
   .hero{background:#fff;position:relative;overflow:hidden;padding:96px 0 88px}
-  .hero::before{content:"";position:absolute;inset:0;background:url("assets/hero-luftbild.jpg") center 32%/cover no-repeat;opacity:.44}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,246,252,.30) 0%,rgba(255,255,255,.42) 55%,#fff 100%)}
-  .hero-inner{max-width:840px;margin:0 auto;text-align:center;position:relative;z-index:2}
+  .hero::before{content:"";position:absolute;inset:0;background:url("assets/adobe-fassaden.jpg") center top/cover no-repeat;opacity:.66}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,246,252,.08) 0%,rgba(255,255,255,.20) 60%,#fff 100%)}
+  .hero-inner{max-width:880px;margin:0 auto;text-align:center;position:relative;z-index:2;background:rgba(255,255,255,.78);border:1px solid rgba(255,255,255,.9);border-radius:26px;padding:46px 44px 40px;box-shadow:var(--shadow-md)}
   .hero-badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 18px;font-size:13px;font-weight:700;color:var(--blue-800);box-shadow:var(--shadow-sm);margin-bottom:24px}
   .hero-badge svg{width:15px;height:15px;stroke:var(--blue-600)}
   .hero h1{font-size:clamp(34px,4.6vw,56px);line-height:1.1;font-weight:800;letter-spacing:-.025em;color:var(--blue-900)}
   .hero h1 .accent{color:var(--blue-600)}
   .hero p.lead{margin:22px auto 32px;font-size:clamp(16px,1.5vw,18.5px);color:var(--slate);max-width:56ch;font-weight:500}
   .hero-ctas{display:flex;gap:14px;flex-wrap:wrap;justify-content:center}
+  .hero-seal{display:inline-block;margin-top:30px;background:#fff;border-radius:16px;padding:14px 22px;box-shadow:var(--shadow-md);transition:transform .15s}
+  .hero-seal:hover{transform:translateY(-2px)}
+  .hero-seal img{height:104px;width:auto;display:block}
   .hero-trust{display:inline-flex;align-items:center;gap:16px;margin-top:40px;padding:16px 22px;background:rgba(255,255,255,.9);backdrop-filter:blur(4px);border:1px solid var(--line);border-radius:14px;box-shadow:var(--shadow-sm);max-width:560px;text-align:left}
-  .hero-trust img{height:52px;width:auto}
-  .hero-trust p{font-size:13px;color:var(--slate);line-height:1.5}
+  .hero-trust img{height:92px;width:auto}
+  .hero-trust p{font-size:14.5px;color:var(--slate);line-height:1.55}
   .hero-trust strong{color:var(--blue-900)}
 
   /* ---------- Slogan band ---------- */
-  .slogan-band{background:url("assets/blaues-wunder.jpg") center 55%/cover no-repeat;color:#fff;padding:72px 0;position:relative;overflow:hidden}
-  .slogan-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,44,84,.82),rgba(23,73,138,.62))}
-  .slogan-inner{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center;position:relative}
+  .slogan-band{background:url("assets/adobe-balkone.jpg") center 45%/cover no-repeat;color:#fff;padding:84px 0;position:relative;overflow:hidden}
+  .slogan-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,44,84,.66),rgba(23,73,138,.42))}
+  .p-kicker{display:inline-block;font-size:13px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:#fff;background:rgba(13,44,84,.55);border:1px solid rgba(255,255,255,.35);border-radius:999px;padding:8px 22px;margin-bottom:26px;backdrop-filter:blur(4px)}
+  .promise-card{display:inline-block;background:#fff;border-radius:18px;padding:40px 48px 26px;box-shadow:0 24px 60px rgba(13,44,84,.35);transform:rotate(-1.4deg);max-width:min(640px,92%)}
+  .promise-card img{width:100%;max-width:540px;height:auto;display:block}
+  .promise-card .sign{display:block;font-family:'Caveat',cursive;font-size:26px;color:var(--ink);margin-top:18px;text-align:right}
+  .slogan-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
   .slogan-text{font-size:clamp(34px,4.6vw,52px);font-weight:700;line-height:1.25}
   .slogan-text .haus{position:relative;display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:.02em}
   .slogan-text .haus svg{position:absolute;left:50%;transform:translateX(-50%);top:-0.52em;width:1.7em;height:.62em}
@@ -112,6 +119,7 @@
   .card h3{font-size:18.5px;font-weight:800;color:var(--blue-900);margin-bottom:9px}
   .card p{font-size:14.5px;color:var(--slate)}
   a.card{display:block}
+  .card img.cthumb{height:150px;width:100%;object-fit:cover;border-radius:12px;margin-bottom:20px;display:block}
   .card .more{display:inline-flex;align-items:center;gap:7px;margin-top:16px;font-size:14px;font-weight:700;color:var(--blue-600);transition:gap .2s}
   .card:hover .more{gap:11px;color:var(--blue-800)}
 
@@ -220,7 +228,7 @@
   .foot-brand .brand-name small{color:rgba(255,255,255,.6)}
   .foot-brand p{margin-top:13px;max-width:34ch;font-size:13px;line-height:1.6}
   .foot-bvi{margin-top:18px;background:#fff;border-radius:10px;padding:9px 13px;display:inline-block}
-  .foot-bvi img{height:42px;width:auto}
+  .foot-bvi img{height:64px;width:auto}
   .credits{padding-top:24px;display:flex;justify-content:space-between;gap:22px;flex-wrap:wrap;font-size:12px;color:rgba(255,255,255,.5)}
   .credits a{text-decoration:underline;text-underline-offset:2px}
   .credits a:hover{color:rgba(255,255,255,.8)}
@@ -288,10 +296,10 @@
       <a href="#aktuelles">Aktuelles</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
-    <button class="btn btn-blue header-login" onclick="openModal()">
+    <a class="btn btn-blue header-login" href="https://portal.as-hausverwaltung.com" target="_blank" rel="noopener">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
       <span>Eigentümer-Login</span>
-    </button>
+    </a>
   </div>
 </header>
 
@@ -299,11 +307,7 @@
 <div class="hero" id="top">
   <div class="wrap">
     <div class="hero-inner">
-      <span class="hero-badge">
-        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-        Mitglied im Bundesfachverband der Immobilienverwalter e.V.
-      </span>
-      <h1>Hausverwaltung in Dresden – <span class="accent">individuell, persönlich, zuverlässig.</span></h1>
+      <h1>Hausverwaltung in Dresden: <span class="accent">individuell, persönlich, zuverlässig.</span></h1>
       <p class="lead">Von der WEG-Verwaltung bis zur Mietshausverwaltung: Wir betreuen Ihre Immobilie mit Sorgfalt, kurzen Wegen und einem festen Ansprechpartner – direkt hier in Dresden.</p>
       <div class="hero-ctas">
         <a class="btn btn-blue" href="#kontakt">Angebot anfragen
@@ -311,10 +315,9 @@
         </a>
         <a class="btn btn-ghost" href="leistungen.html">Leistungen entdecken</a>
       </div>
-      <div class="hero-trust">
-        <img src="assets/bvi-logo.svg" alt="BVI – Bundesfachverband der Immobilienverwalter e.V.">
-        <p><strong>Geprüfte Qualität:</strong> Wir sind Mitglied im Bundesfachverband der Immobilienverwalter e.V. und bilden uns laufend weiter.</p>
-      </div>
+      <a class="hero-seal" href="https://bvi-verwalter.de" target="_blank" rel="noopener" title="Zur Webseite des BVI e.V.">
+        <img src="assets/bvi-siegel.png" alt="BVI-Siegel: Zertifizierter Verwalter nach § 26a WEG / § 8 ZertVerwV">
+      </a>
     </div>
   </div>
 </div>
@@ -322,13 +325,11 @@
 <!-- ======= Slogan ======= -->
 <div class="slogan-band">
   <div class="wrap slogan-inner">
-    <div class="slogan-text">
-      <span class="script">Wir nehmen uns Zeit für Ihre</span>&nbsp;
-      <span class="haus">
-        <svg viewBox="0 0 100 36" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 32 50 6l44 26" stroke="#e85c50" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        HAUS</span><span class="script">-Aufgaben!</span>
+    <span class="p-kicker">Unser Versprechen</span>
+    <div class="promise-card">
+      <img src="assets/hausaufgaben-logo.png" alt="Wir nehmen uns Zeit für Ihre HAUS-Aufgaben!">
+      <span class="sign">– Andreas Scholz, Geschäftsführer</span>
     </div>
-    <span class="slogan-sub">– AS-Hausverwaltung Dresden GmbH, Ihr Verwalter mit Zeit für das Wesentliche –</span>
   </div>
 </div>
 
@@ -340,37 +341,37 @@
     <p class="sub">Wir widmen uns sehr individuell den Wünschen der Eigentümer und Eigentümergemeinschaften. Klicken Sie auf eine Leistung für Details und Musterdokumente zum Download.</p>
     <div class="cards" style="text-align:left">
       <a class="card" href="leistungen.html#weg-verwaltung">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1M9 13h1m4 0h1M9 17h1m4 0h1"/></svg></div>
+        <img class="cthumb" src="assets/adobe-fassaden.jpg" alt="Sanierte Gründerzeitfassaden mit blauem Himmel" style="object-position:center 30%">
         <h3>WEG-Verwaltung</h3>
         <p>Umfassende Verwaltung von Wohnungseigentümergemeinschaften – von der Eigentümerversammlung über die Beschlussumsetzung bis zur Hausgeldabrechnung.</p>
         <span class="more">Details &amp; Muster-PDFs <span>→</span></span>
       </a>
       <a class="card" href="leistungen.html#sondereigentum">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5 12 3l9 6.5M5 11v9h14v-9M9 20v-5h6v5"/></svg></div>
+        <img class="cthumb" src="assets/adobe-balkone.jpg" alt="Altbau-Balkone in der Sonne" style="object-position:center 40%">
         <h3>Sondereigentums- &amp; Mietverwaltung</h3>
         <p>Zuverlässige Verwaltung Ihres Sondereigentums und Ihrer Mietshäuser: Mietverträge, Nebenkostenabrechnung, Mieterbetreuung und Instandhaltung.</p>
         <span class="more">Details &amp; Muster-PDFs <span>→</span></span>
       </a>
       <a class="card" href="leistungen.html#hausmeisterdienst">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a4.5 4.5 0 0 0-6.09 6.09L3 18v3h3l5.61-5.61a4.5 4.5 0 0 0 6.09-6.09l-2.85 2.85-2.55-2.55L14.7 6.3z"/></svg></div>
+        <img class="cthumb" src="assets/thumb-hausmeister3.jpg" alt="Handwerker mit Werkzeugschürze" style="object-position:center 30%">
         <h3>Hausmeisterdienst</h3>
         <p>Regelmäßige Objektbetreuung durch bewährte Partner-Hausmeisterdienste – für gepflegte Anlagen und schnelle Hilfe direkt vor Ort.</p>
         <span class="more">Mehr erfahren <span>→</span></span>
       </a>
       <a class="card" href="leistungen.html#baumaengel">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l2.5 2.5"/></svg></div>
+        <img class="cthumb" src="assets/thumb-baumaengel.jpg" alt="Altbauzimmer vor der Sanierung" style="object-position:center 55%">
         <h3>Baumängelbearbeitung</h3>
         <p>Konsequente Verfolgung von Baumängeln und Gewährleistungsansprüchen – mit Ingenieurswissen und Erfahrung aus der Bausanierung.</p>
         <span class="more">Mehr erfahren <span>→</span></span>
       </a>
       <a class="card" href="leistungen.html#kosteneinsparungen">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6.5c0-1.9-2.2-3-5-3s-5 1.1-5 3 1.8 2.7 5 3.2 5 1.4 5 3.3-2.2 3-5 3-5-1.1-5-3"/></svg></div>
+        <img class="cthumb" src="assets/thumb-euro.jpg" alt="Euro-Scheine und Münzen" style="object-position:center">
         <h3>Kosteneinsparungen</h3>
         <p>Laufende Prüfung und Optimierung von Verträgen, Versicherungen und Betriebskosten – damit Ihre Immobilie wirtschaftlich bleibt.</p>
         <span class="more">Mehr erfahren <span>→</span></span>
       </a>
       <a class="card" href="leistungen.html#verwaltervertrag">
-        <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9l-6-6zM14 3v6h6M9 14l2 2 4-4"/></svg></div>
+        <img class="cthumb" src="assets/thumb-vertrag.jpg" alt="Unterzeichnung eines Verwaltervertrags" style="object-position:center">
         <h3>Verwalterverträge</h3>
         <p>Klare, faire Verwalterverträge mit kurzen Laufzeiten – abgesichert durch Vermögensschadens-, Betriebshaftpflicht- und Vertrauensschadensversicherung.</p>
         <span class="more">Mehr erfahren <span>→</span></span>
@@ -389,7 +390,7 @@
     <div>
       <span class="kicker">Über uns</span>
       <h2 class="title">Persönliche Verwaltung statt anonymer Großstruktur</h2>
-      <p class="sub">Die AS-Hausverwaltung Dresden GmbH unter Leitung von Geschäftsführer Dipl.-Ing. Andreas Scholz verwaltet Wohnobjekte ausschließlich in Dresden und der nahen Umgebung. So sind wir immer schnell vor Ort – bei Ihren Objekten und bei Ihren Anliegen.</p>
+      <p class="sub">Die AS-Hausverwaltung Dresden GmbH unter Leitung von Geschäftsführer Andreas Scholz (Dipl.-Ing.) verwaltet Wohnobjekte ausschließlich in Dresden und der nahen Umgebung. So sind wir immer schnell vor Ort – bei Ihren Objekten und bei Ihren Anliegen.</p>
       <ul class="checklist">
         <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Persönliche und individuelle Betreuung von Eigentümern und Mietern</li>
         <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg></span>Schnelle Abrechnungen unmittelbar nach Ende der Abrechnungsperiode</li>
@@ -413,28 +414,28 @@
     <div class="refs" style="text-align:left">
       <figure class="ref">
         <span class="tag">WEG</span>
-        <img src="assets/ref-wachsbleichstrasse-39.jpg" alt="Wohnhaus Wachsbleichstraße 39, Dresden">
-        <figcaption class="body"><strong>Wachsbleichstraße 39</strong><span>Dresden-Friedrichstadt · WEG-Verwaltung</span></figcaption>
+        <img src="assets/ref-wachsbleichstrasse-39.jpg" alt="Wohnhaus in Dresden-Friedrichstadt">
+        <figcaption class="body"><strong>Dresden-Friedrichstadt</strong><span>WEG-Verwaltung</span></figcaption>
       </figure>
       <figure class="ref">
         <span class="tag">WEG</span>
-        <img src="assets/ref-columbusstr-11.jpg" alt="Wohnhaus Columbusstraße 11, Dresden">
-        <figcaption class="body"><strong>Columbusstraße 11</strong><span>Dresden-Löbtau · WEG-Verwaltung</span></figcaption>
+        <img src="assets/ref-columbusstr-11.jpg" alt="Wohnhaus in Dresden-Löbtau">
+        <figcaption class="body"><strong>Dresden-Löbtau</strong><span>WEG-Verwaltung</span></figcaption>
       </figure>
       <figure class="ref">
         <span class="tag">WEG</span>
-        <img src="assets/ref-braunsdorfer-str-11.jpg" alt="Wohnhaus Braunsdorfer Straße 11, Dresden">
-        <figcaption class="body"><strong>Braunsdorfer Straße 11</strong><span>Dresden-Löbtau · WEG-Verwaltung</span></figcaption>
+        <img src="assets/ref-braunsdorfer-str-11.jpg" alt="Wohnhaus in Dresden-Löbtau">
+        <figcaption class="body"><strong>Dresden-Löbtau</strong><span>WEG-Verwaltung</span></figcaption>
       </figure>
       <figure class="ref">
         <span class="tag">WEG</span>
-        <img src="assets/ref-rosa-menzer-str-15.jpg" alt="Wohnhaus Rosa-Menzer-Straße 15, Dresden">
-        <figcaption class="body"><strong>Rosa-Menzer-Straße 15</strong><span>Dresden-Striesen · WEG-Verwaltung &amp; Firmensitz</span></figcaption>
+        <img src="assets/ref-rosa-menzer-str-15.jpg" alt="Wohnhaus in Dresden-Striesen">
+        <figcaption class="body"><strong>Dresden-Striesen</strong><span>WEG-Verwaltung &amp; Firmensitz</span></figcaption>
       </figure>
       <figure class="ref">
         <span class="tag">WEG</span>
-        <img src="assets/ref-prohliser-str-28.jpg" alt="Wohnhaus Prohliser Straße 28, Dresden">
-        <figcaption class="body"><strong>Prohliser Straße 28</strong><span>Dresden-Prohlis · WEG-Verwaltung</span></figcaption>
+        <img src="assets/ref-prohliser-str-28.jpg" alt="Wohnhaus in Dresden-Prohlis">
+        <figcaption class="body"><strong>Dresden-Prohlis</strong><span>WEG-Verwaltung</span></figcaption>
       </figure>
     </div>
   </div>
@@ -453,7 +454,7 @@
           <span class="pill">Steuern</span>
           <h3>Grundsteuerreform: Was Eigentümer jetzt wissen müssen</h3>
           <p>Die neue Grundsteuer wirft viele Fragen auf. Wir informieren über Bescheide, Fristen und Einspruchsmöglichkeiten.</p>
-          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+          <a href="https://www.grundsteuer.sachsen.de" target="_blank" rel="noopener">Infoportal des Freistaats Sachsen <span>↗</span></a>
         </div>
       </div>
       <div class="news-card">
@@ -462,25 +463,24 @@
           <span class="pill">Mietrecht</span>
           <h3>Dresdner Mietspiegel</h3>
           <p>Der aktuelle Mietspiegel der Landeshauptstadt Dresden – Grundlage für zulässige Mieten und Mieterhöhungen im Stadtgebiet.</p>
-          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+          <a href="https://www.dresden.de/de/leben/wohnen/wohnungsmarkt/mietspiegel.php" target="_blank" rel="noopener">Zum Mietspiegel auf dresden.de <span>↗</span></a>
         </div>
       </div>
       <div class="news-card">
-        <img class="thumb" src="assets/hero-blaue-stunde.jpg" alt="Dresdner Altstadt zur blauen Stunde" style="object-position:center 40%">
+        <img class="thumb" src="assets/striesen-villa.jpg" alt="Wohnhaus in Dresden unter blauem Himmel" style="object-position:center 55%">
         <div class="nc-body">
           <span class="pill">Verordnungen</span>
           <h3>Kappungsgrenzen- und Mietpreisbegrenzungsverordnung</h3>
-          <p>Welche Grenzen bei Mieterhöhungen und Neuvermietungen in Dresden gelten – und was das für Eigentümer bedeutet.</p>
-          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+          <p>Welche Grenzen bei Mieterhöhungen und Neuvermietungen in Dresden gelten – und was das für Eigentümer bedeutet. Wir beraten Sie gern im Detail.</p>
         </div>
       </div>
       <div class="news-card">
-        <img class="thumb" src="assets/thumb-bgh.jpg" alt="Bundesgerichtshof in Karlsruhe">
+        <img class="thumb" src="assets/thumb-bgh-blau.jpg" alt="Bundesgerichtshof in Karlsruhe vor blauem Himmel" style="object-position:center 35%">
         <div class="nc-body">
           <span class="pill">Rechtsprechung</span>
           <h3>BGH-Urteile zu Schönheitsreparaturen</h3>
           <p>Die aktuelle Rechtsprechung des Bundesgerichtshofs zu Schönheitsreparaturklauseln in Mietverträgen im Überblick.</p>
-          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+          <a href="https://juris.bundesgerichtshof.de/cgi-bin/rechtsprechung/list.py?Gericht=bgh&amp;Art=en&amp;Datum=Aktuell&amp;Sort=12288" target="_blank" rel="noopener">Aktuelle BGH-Entscheidungen <span>↗</span></a>
         </div>
       </div>
       <div class="news-card">
@@ -489,15 +489,15 @@
           <span class="pill">Zahlungsverkehr</span>
           <h3>SEPA-Lastschrift bequem nutzen</h3>
           <p>Hausgeld und Miete einfach per SEPA-Lastschriftmandat zahlen – sicher, pünktlich und ohne Aufwand für Sie.</p>
-          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+          <a href="service.html#formulare">SEPA-Formulare herunterladen <span>→</span></a>
         </div>
       </div>
       <div class="news-card">
         <img class="thumb" src="assets/thumb-schluessel.jpg" alt="Schlüssel in einer Haustür">
         <div class="nc-body">
           <span class="pill">Vermietung &amp; Verkauf</span>
-          <h3>Vermietung und Verkauf aus einer Hand</h3>
-          <p>Wir unterstützen Sie bei der Neuvermietung und dem Verkauf Ihrer Wohnung – mit Marktkenntnis direkt aus Dresden.</p>
+          <h3>Vermietung und Verkauf mit starkem Partner</h3>
+          <p>Bei Neuvermietung und Verkauf arbeiten wir mit einem erfahrenen Vermarktungspartner zusammen – mit Marktkenntnis direkt aus Dresden.</p>
           <a href="#vermietung">Mehr erfahren <span>→</span></a>
         </div>
       </div>
@@ -532,10 +532,10 @@
         <p class="vv-note">Haben Sie an all das gedacht? Diese Liste ist nicht abschließend – und durch Änderungen in Gesetzgebung und Rechtsprechung ändern sich die Antworten laufend. Wir behalten das für Sie im Blick.</p>
       </div>
       <div class="vv-card">
-        <img class="vv-img" src="assets/striesen-villa.jpg" alt="Historische Villa in Dresden-Striesen" style="object-position:center 65%">
+        <img class="vv-img" src="assets/adobe-altbau-ecke.jpg" alt="Altbau mit Eckturm vor blauem Himmel" style="object-position:center 40%">
         <div class="vv-body">
           <h3>Aktuelle Miet- &amp; Verkaufsangebote</h3>
-          <p>Unsere aktuellen Angebote finden Sie bequem online bei ImmobilienScout24 – direkt aus unserer Verwaltung, ohne Umwege.</p>
+          <p>Gemeinsam mit unserem Vermarktungspartner präsentieren wir unsere aktuellen Angebote auf ImmobilienScout24 – professionell aufbereitet und immer aktuell.</p>
           <a class="btn btn-white" href="https://portal.immobilienscout24.de/ergebnisliste/79544144" target="_blank" rel="noopener">
             Angebote auf ImmoScout24 ansehen
             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
@@ -562,28 +562,16 @@
           <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>Sicher verschlüsselt und nur für Eigentümer</li>
         </ul>
       </div>
-      <div class="login-card">
-        <h3>Anmeldung</h3>
-        <p class="hint">Zugang für Eigentümer der von uns verwalteten Objekte.</p>
-        <form onsubmit="return portalSoon(this)">
-          <div class="field">
-            <label for="p-user">E-Mail-Adresse oder Eigentümer-Nr.</label>
-            <input id="p-user" type="text" placeholder="z. B. max.mustermann@mail.de" autocomplete="username">
-          </div>
-          <div class="field">
-            <label for="p-pass">Passwort</label>
-            <input id="p-pass" type="password" placeholder="••••••••" autocomplete="current-password">
-          </div>
-          <button class="btn btn-blue" type="submit">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
-            Anmelden
-          </button>
-          <p class="soon">Das Eigentümer-Portal befindet sich derzeit im Aufbau und steht in Kürze zur Verfügung. Ihre Zugangsdaten erhalten Sie per Post.</p>
-          <div class="login-links">
-            <a href="#kontakt">Passwort vergessen?</a>
-            <a href="#kontakt">Zugang beantragen</a>
-          </div>
-        </form>
+      <div class="login-card" style="text-align:center">
+        <h3>Zum Eigentümer-Portal</h3>
+        <p class="hint">Ihre Abrechnungen, Protokolle und Dokumente – jederzeit online abrufbar. Die Anmeldung erfolgt sicher auf unserer Portal-Seite.</p>
+        <a class="btn btn-blue" style="width:100%;justify-content:center" href="https://portal.as-hausverwaltung.com" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4M10 17l5-5-5-5M15 12H3"/></svg>
+          Zum Eigentümer-Login
+        </a>
+        <div class="login-links" style="justify-content:center">
+          <a href="#kontakt">Noch keinen Zugang? Jetzt beantragen</a>
+        </div>
       </div>
     </div>
   </div>
@@ -601,19 +589,19 @@
       <div class="contact-info">
         <div class="info-row">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
-          <div><strong>Adresse</strong><p>AS-Hausverwaltung Dresden GmbH<br>Rosa-Menzer-Str. 15 · 01309 Dresden</p></div>
+            <div><strong>Adresse</strong><p>AS-Hausverwaltung Dresden GmbH<br>Rosa-Menzer-Str. 15 · 01309 Dresden</p></div>
         </div>
         <div class="info-row">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></div>
-          <div><strong>Telefon &amp; Fax</strong><p><a href="tel:+493513110736">Tel. (0351) 311 07 36</a><br>Fax (0351) 319 051 75</p></div>
+            <div><strong>Telefon &amp; Fax</strong><p><a href="tel:+493513110736">Tel. (0351) 311 07 36</a><br>Fax (0351) 319 051 75</p></div>
         </div>
         <div class="info-row">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path d="m22 6-10 7L2 6"/></svg></div>
-          <div><strong>E-Mail</strong><p><a href="mailto:info@as-hausverwaltung.com">info@as-hausverwaltung.com</a></p></div>
+            <div><strong>E-Mail</strong><p><a href="mailto:info@as-hausverwaltung.com">info@as-hausverwaltung.com</a></p></div>
         </div>
         <div class="info-row">
           <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
-          <div><strong>Geschäftszeiten</strong><p>Termine nach Vereinbarung –<br>wir nehmen uns Zeit für Ihr Anliegen.</p></div>
+            <div><strong>Bürozeiten</strong><p>Montag – Freitag: 9:00 – 12:00 Uhr<br>Mo, Di &amp; Do: zusätzlich 14:00 – 16:00 Uhr</p></div>
         </div>
       </div>
       <form class="contact" onsubmit="return contactDemo(this)">
@@ -664,8 +652,8 @@
           </svg>
           <span class="brand-name">AS-Hausverwaltung<small>Dresden GmbH</small></span>
         </a>
-        <p>Wir nehmen uns Zeit für Ihre HAUS-Aufgaben. Persönliche Haus- und WEG-Verwaltung in Dresden unter Leitung von Dipl.-Ing. Andreas Scholz.</p>
-        <span class="foot-bvi"><img src="assets/bvi-logo.svg" alt="BVI – Bundesfachverband der Immobilienverwalter e.V."></span>
+        <p>Wir nehmen uns Zeit für Ihre HAUS-Aufgaben. Persönliche Haus- und WEG-Verwaltung in Dresden unter Leitung von Andreas Scholz (Dipl.-Ing.).</p>
+        <a class="foot-bvi" href="https://bvi-verwalter.de" target="_blank" rel="noopener" title="Zur Webseite des BVI e.V."><img src="assets/bvi-siegel.png" alt="BVI-Siegel: Zertifizierter Verwalter nach § 26a WEG – zur BVI-Webseite"></a>
       </div>
       <div>
         <h4>Leistungen</h4>
@@ -683,7 +671,7 @@
           <li><a href="#referenzen">Referenzen</a></li>
           <li><a href="service.html">Service &amp; Downloads</a></li>
           <li><a href="service.html#notrufnummern">Notrufnummern</a></li>
-          <li><a href="#" onclick="openModal();return false;">Eigentümer-Portal</a></li>
+          <li><a href="https://portal.as-hausverwaltung.com" target="_blank" rel="noopener">Eigentümer-Portal</a></li>
         </ul>
       </div>
       <div>
@@ -698,41 +686,13 @@
     </div>
     <div class="credits">
       <span>© 2026 AS-Hausverwaltung Dresden GmbH. Alle Rechte vorbehalten.</span>
-      <span>Bildnachweis: <a href="https://commons.wikimedia.org/wiki/File:Luftbild_Dresden-Altstadt_17.jpg" target="_blank" rel="noopener">Derbrauni</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-Elbpanorama-01-gje.jpg" target="_blank" rel="noopener">G.&nbsp;Jerusalem</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-1616-Blaues_Wunder-2008-gje.jpg" target="_blank" rel="noopener">Blaues&nbsp;Wunder</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-Altstadt_von_der_Marienbruecke-II_(cropped).jpg" target="_blank" rel="noopener">Blaue&nbsp;Stunde</a>, <a href="https://commons.wikimedia.org/wiki/File:20060419070DR_Dresden-Striesen_Glasewaldtstra%C3%9Fe_8.jpg" target="_blank" rel="noopener">J.&nbsp;Blobelt</a>, <a href="https://commons.wikimedia.org/wiki/File:Palais-Bundesgerichtshof-Karlsruhe-Germany.jpg" target="_blank" rel="noopener">BGH</a> – Wikimedia Commons, CC BY/CC BY-SA · Themenbilder: StockSnap/rawpixel (CC0)</span>
+      <span>Bildnachweis: <a href="https://commons.wikimedia.org/wiki/File:Luftbild_Dresden-Altstadt_17.jpg" target="_blank" rel="noopener">Derbrauni</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-Elbpanorama-01-gje.jpg" target="_blank" rel="noopener">G.&nbsp;Jerusalem</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-1616-Blaues_Wunder-2008-gje.jpg" target="_blank" rel="noopener">Blaues&nbsp;Wunder</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-Altstadt_von_der_Marienbruecke-II_(cropped).jpg" target="_blank" rel="noopener">Blaue&nbsp;Stunde</a>, <a href="https://commons.wikimedia.org/wiki/File:20060419070DR_Dresden-Striesen_Glasewaldtstra%C3%9Fe_8.jpg" target="_blank" rel="noopener">J.&nbsp;Blobelt</a>, <a href="https://commons.wikimedia.org/wiki/File:Palais-Bundesgerichtshof-Karlsruhe-Germany.jpg" target="_blank" rel="noopener">BGH</a> – Wikimedia Commons, CC BY/CC BY-SA · Themenbilder: StockSnap/rawpixel (CC0) · Fassaden-Fotos: Adobe Stock (lizenziert)</span>
     </div>
   </div>
 </footer>
 
-<!-- ======= Login-Modal ======= -->
-<div class="modal-backdrop" id="loginModal" onclick="if(event.target===this)closeModal()">
-  <div class="modal">
-    <div class="login-card">
-      <button class="close" onclick="closeModal()" aria-label="Schließen">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-      <h3>Eigentümer-Login</h3>
-      <p class="hint">Melden Sie sich mit Ihren Zugangsdaten an.</p>
-      <form onsubmit="return portalSoon(this)">
-        <div class="field">
-          <label for="m-user">E-Mail-Adresse oder Eigentümer-Nr.</label>
-          <input id="m-user" type="text" placeholder="z. B. max.mustermann@mail.de">
-        </div>
-        <div class="field">
-          <label for="m-pass">Passwort</label>
-          <input id="m-pass" type="password" placeholder="••••••••">
-        </div>
-        <button class="btn btn-blue" type="submit" style="width:100%;justify-content:center">Anmelden</button>
-        <p class="soon">Das Eigentümer-Portal befindet sich derzeit im Aufbau und steht in Kürze zur Verfügung.</p>
-      </form>
-    </div>
-  </div>
-</div>
-
 <script>
-  function openModal(){ document.getElementById('loginModal').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeModal(){ document.getElementById('loginModal').classList.remove('open'); document.body.style.overflow=''; }
-  addEventListener('keydown', e => { if(e.key==='Escape') closeModal(); });
-  function portalSoon(form){ form.querySelector('.soon').classList.add('show'); return false; }
+
   function contactDemo(form){ form.querySelector('.soon').classList.add('show'); return false; }
 </script>
 </body>
