@@ -66,8 +66,8 @@
 
   /* ---------- Hero ---------- */
   .hero{background:#fff;position:relative;overflow:hidden;padding:96px 0 88px}
-  .hero::before{content:"";position:absolute;inset:0;background:url("assets/hero-luftbild.jpg") center 32%/cover no-repeat;opacity:.30}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,246,252,.45) 0%,rgba(255,255,255,.55) 55%,#fff 100%)}
+  .hero::before{content:"";position:absolute;inset:0;background:url("assets/hero-luftbild.jpg") center 32%/cover no-repeat;opacity:.44}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(241,246,252,.30) 0%,rgba(255,255,255,.42) 55%,#fff 100%)}
   .hero-inner{max-width:840px;margin:0 auto;text-align:center;position:relative;z-index:2}
   .hero-badge{display:inline-flex;align-items:center;gap:9px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:7px 18px;font-size:13px;font-weight:700;color:var(--blue-800);box-shadow:var(--shadow-sm);margin-bottom:24px}
   .hero-badge svg{width:15px;height:15px;stroke:var(--blue-600)}
@@ -81,8 +81,8 @@
   .hero-trust strong{color:var(--blue-900)}
 
   /* ---------- Slogan band ---------- */
-  .slogan-band{background:linear-gradient(120deg,var(--blue-800),var(--blue-600));color:#fff;padding:56px 0;position:relative;overflow:hidden}
-  .slogan-band::before{content:"";position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cpath d='M30 90 60 60l30 30M60 60V30' stroke='rgba(255,255,255,0.05)' stroke-width='6' fill='none'/%3E%3C/svg%3E")}
+  .slogan-band{background:url("assets/blaues-wunder.jpg") center 55%/cover no-repeat;color:#fff;padding:72px 0;position:relative;overflow:hidden}
+  .slogan-band::before{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,44,84,.82),rgba(23,73,138,.62))}
   .slogan-inner{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center;position:relative}
   .slogan-text{font-size:clamp(34px,4.6vw,52px);font-weight:700;line-height:1.25}
   .slogan-text .haus{position:relative;display:inline-block;font-family:'Plus Jakarta Sans',sans-serif;font-weight:800;letter-spacing:.02em}
@@ -143,8 +143,11 @@
   /* ---------- Aktuelles ---------- */
   #aktuelles{background:var(--blue-50)}
   .news{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
-  .news-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;display:flex;flex-direction:column;gap:11px;transition:box-shadow .25s,transform .2s}
+  .news-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);display:flex;flex-direction:column;overflow:hidden;transition:box-shadow .25s,transform .2s}
   .news-card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
+  .news-card img.thumb{height:150px;width:100%;object-fit:cover;display:block}
+  .news-card:hover img.thumb{opacity:.92}
+  .news-card .nc-body{padding:22px 26px 26px;display:flex;flex-direction:column;gap:11px;flex-grow:1}
   .news-card .pill{align-self:flex-start;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--blue-700);background:var(--blue-100);padding:5px 12px;border-radius:999px}
   .news-card h3{font-size:17px;font-weight:800;color:var(--blue-900);line-height:1.35}
   .news-card p{font-size:14px;color:var(--slate);flex-grow:1}
@@ -157,7 +160,9 @@
   .vv-list li{list-style:none;display:flex;gap:10px;font-size:14.5px;font-weight:500;color:var(--ink)}
   .vv-list li::before{content:"";flex-shrink:0;width:7px;height:7px;border-radius:99px;background:var(--red);margin-top:9px}
   .vv-note{margin-top:22px;background:var(--blue-50);border-left:4px solid var(--blue-500);border-radius:10px;padding:16px 20px;font-size:14.5px;font-weight:600;color:var(--blue-900)}
-  .vv-card{background:linear-gradient(120deg,var(--blue-900),var(--blue-700));color:#fff;border-radius:20px;padding:38px 36px;box-shadow:var(--shadow-md);position:sticky;top:130px}
+  .vv-card{background:linear-gradient(120deg,var(--blue-900),var(--blue-700));color:#fff;border-radius:20px;padding:0;overflow:hidden;box-shadow:var(--shadow-md);position:sticky;top:130px}
+  .vv-card img.vv-img{width:100%;height:180px;object-fit:cover;display:block}
+  .vv-card .vv-body{padding:30px 34px 36px}
   .vv-card h3{font-size:20px;font-weight:800;margin-bottom:10px}
   .vv-card p{font-size:14.5px;color:rgba(255,255,255,.8);margin-bottom:22px}
   .vv-card .btn{width:100%;justify-content:center}
@@ -443,40 +448,58 @@
     <p class="sub">Wichtige Themen rund um Wohneigentum, Mietrecht und Verwaltung – von uns für Sie zusammengefasst.</p>
     <div class="news" style="text-align:left">
       <div class="news-card">
-        <span class="pill">Steuern</span>
-        <h3>Grundsteuerreform: Was Eigentümer jetzt wissen müssen</h3>
-        <p>Die neue Grundsteuer wirft viele Fragen auf. Wir informieren über Bescheide, Fristen und Einspruchsmöglichkeiten.</p>
-        <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        <img class="thumb" src="assets/thumb-abrechnung.jpg" alt="Unterlagen und Notizen zur Grundsteuer">
+        <div class="nc-body">
+          <span class="pill">Steuern</span>
+          <h3>Grundsteuerreform: Was Eigentümer jetzt wissen müssen</h3>
+          <p>Die neue Grundsteuer wirft viele Fragen auf. Wir informieren über Bescheide, Fristen und Einspruchsmöglichkeiten.</p>
+          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        </div>
       </div>
       <div class="news-card">
-        <span class="pill">Mietrecht</span>
-        <h3>Dresdner Mietspiegel</h3>
-        <p>Der aktuelle Mietspiegel der Landeshauptstadt Dresden – Grundlage für zulässige Mieten und Mieterhöhungen im Stadtgebiet.</p>
-        <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        <img class="thumb" src="assets/hero-elbpanorama.jpg" alt="Dresdner Altstadt-Panorama mit Elbwiesen" style="object-position:center 55%">
+        <div class="nc-body">
+          <span class="pill">Mietrecht</span>
+          <h3>Dresdner Mietspiegel</h3>
+          <p>Der aktuelle Mietspiegel der Landeshauptstadt Dresden – Grundlage für zulässige Mieten und Mieterhöhungen im Stadtgebiet.</p>
+          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        </div>
       </div>
       <div class="news-card">
-        <span class="pill">Verordnungen</span>
-        <h3>Kappungsgrenzen- und Mietpreisbegrenzungsverordnung</h3>
-        <p>Welche Grenzen bei Mieterhöhungen und Neuvermietungen in Dresden gelten – und was das für Eigentümer bedeutet.</p>
-        <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        <img class="thumb" src="assets/hero-blaue-stunde.jpg" alt="Dresdner Altstadt zur blauen Stunde" style="object-position:center 40%">
+        <div class="nc-body">
+          <span class="pill">Verordnungen</span>
+          <h3>Kappungsgrenzen- und Mietpreisbegrenzungsverordnung</h3>
+          <p>Welche Grenzen bei Mieterhöhungen und Neuvermietungen in Dresden gelten – und was das für Eigentümer bedeutet.</p>
+          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        </div>
       </div>
       <div class="news-card">
-        <span class="pill">Rechtsprechung</span>
-        <h3>BGH-Urteile zu Schönheitsreparaturen</h3>
-        <p>Die aktuelle Rechtsprechung des Bundesgerichtshofs zu Schönheitsreparaturklauseln in Mietverträgen im Überblick.</p>
-        <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        <img class="thumb" src="assets/thumb-bgh.jpg" alt="Bundesgerichtshof in Karlsruhe">
+        <div class="nc-body">
+          <span class="pill">Rechtsprechung</span>
+          <h3>BGH-Urteile zu Schönheitsreparaturen</h3>
+          <p>Die aktuelle Rechtsprechung des Bundesgerichtshofs zu Schönheitsreparaturklauseln in Mietverträgen im Überblick.</p>
+          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        </div>
       </div>
       <div class="news-card">
-        <span class="pill">Zahlungsverkehr</span>
-        <h3>SEPA-Lastschrift bequem nutzen</h3>
-        <p>Hausgeld und Miete einfach per SEPA-Lastschriftmandat zahlen – sicher, pünktlich und ohne Aufwand für Sie.</p>
-        <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        <img class="thumb" src="assets/thumb-euro.jpg" alt="Euro-Scheine und Münzen">
+        <div class="nc-body">
+          <span class="pill">Zahlungsverkehr</span>
+          <h3>SEPA-Lastschrift bequem nutzen</h3>
+          <p>Hausgeld und Miete einfach per SEPA-Lastschriftmandat zahlen – sicher, pünktlich und ohne Aufwand für Sie.</p>
+          <a href="#kontakt">Mehr erfahren <span>→</span></a>
+        </div>
       </div>
       <div class="news-card">
-        <span class="pill">Vermietung &amp; Verkauf</span>
-        <h3>Vermietung und Verkauf aus einer Hand</h3>
-        <p>Wir unterstützen Sie bei der Neuvermietung und dem Verkauf Ihrer Wohnung – mit Marktkenntnis direkt aus Dresden.</p>
-        <a href="#vermietung">Mehr erfahren <span>→</span></a>
+        <img class="thumb" src="assets/thumb-schluessel.jpg" alt="Schlüssel in einer Haustür">
+        <div class="nc-body">
+          <span class="pill">Vermietung &amp; Verkauf</span>
+          <h3>Vermietung und Verkauf aus einer Hand</h3>
+          <p>Wir unterstützen Sie bei der Neuvermietung und dem Verkauf Ihrer Wohnung – mit Marktkenntnis direkt aus Dresden.</p>
+          <a href="#vermietung">Mehr erfahren <span>→</span></a>
+        </div>
       </div>
     </div>
   </div>
@@ -509,13 +532,16 @@
         <p class="vv-note">Haben Sie an all das gedacht? Diese Liste ist nicht abschließend – und durch Änderungen in Gesetzgebung und Rechtsprechung ändern sich die Antworten laufend. Wir behalten das für Sie im Blick.</p>
       </div>
       <div class="vv-card">
-        <h3>Aktuelle Miet- &amp; Verkaufsangebote</h3>
-        <p>Unsere aktuellen Angebote finden Sie bequem online bei ImmobilienScout24 – direkt aus unserer Verwaltung, ohne Umwege.</p>
-        <a class="btn btn-white" href="https://portal.immobilienscout24.de/ergebnisliste/79544144" target="_blank" rel="noopener">
-          Angebote auf ImmoScout24 ansehen
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
-        </a>
-        <a class="sec" href="#kontakt">Oder direkt beraten lassen →</a>
+        <img class="vv-img" src="assets/striesen-villa.jpg" alt="Historische Villa in Dresden-Striesen" style="object-position:center 65%">
+        <div class="vv-body">
+          <h3>Aktuelle Miet- &amp; Verkaufsangebote</h3>
+          <p>Unsere aktuellen Angebote finden Sie bequem online bei ImmobilienScout24 – direkt aus unserer Verwaltung, ohne Umwege.</p>
+          <a class="btn btn-white" href="https://portal.immobilienscout24.de/ergebnisliste/79544144" target="_blank" rel="noopener">
+            Angebote auf ImmoScout24 ansehen
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14 21 3"/></svg>
+          </a>
+          <a class="sec" href="#kontakt">Oder direkt beraten lassen →</a>
+        </div>
       </div>
     </div>
   </div>
@@ -672,7 +698,7 @@
     </div>
     <div class="credits">
       <span>© 2026 AS-Hausverwaltung Dresden GmbH. Alle Rechte vorbehalten.</span>
-      <span>Bildnachweis Luftbild Dresden: <a href="https://commons.wikimedia.org/wiki/File:Luftbild_Dresden-Altstadt_17.jpg" target="_blank" rel="noopener">Derbrauni, Wikimedia Commons (CC BY 4.0)</a></span>
+      <span>Bildnachweis: <a href="https://commons.wikimedia.org/wiki/File:Luftbild_Dresden-Altstadt_17.jpg" target="_blank" rel="noopener">Derbrauni</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-Elbpanorama-01-gje.jpg" target="_blank" rel="noopener">G.&nbsp;Jerusalem</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-1616-Blaues_Wunder-2008-gje.jpg" target="_blank" rel="noopener">Blaues&nbsp;Wunder</a>, <a href="https://commons.wikimedia.org/wiki/File:Dresden-Altstadt_von_der_Marienbruecke-II_(cropped).jpg" target="_blank" rel="noopener">Blaue&nbsp;Stunde</a>, <a href="https://commons.wikimedia.org/wiki/File:20060419070DR_Dresden-Striesen_Glasewaldtstra%C3%9Fe_8.jpg" target="_blank" rel="noopener">J.&nbsp;Blobelt</a>, <a href="https://commons.wikimedia.org/wiki/File:Palais-Bundesgerichtshof-Karlsruhe-Germany.jpg" target="_blank" rel="noopener">BGH</a> – Wikimedia Commons, CC BY/CC BY-SA · Themenbilder: StockSnap/rawpixel (CC0)</span>
     </div>
   </div>
 </footer>
